@@ -6,8 +6,7 @@
 <p>Quoi: <%= @event.description %></p>
 <p>Quand: <%= @event.date%></p>
 <p>Lieu: <%= @event.place%></p>
-
-<p><%= button_to 'Je participe pas car ca ne fonctionne pas', method: :post, class: "btn btn-sm btn-primary" %></p>
+<p><%= button_to 'Je participe', attend_path(@event), method: :post, class: "btn btn-lg btn-primary" %></p>
 
 <p><b>Participants</b></p>
 <ul class="list-group"> 

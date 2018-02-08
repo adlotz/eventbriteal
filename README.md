@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Excercice Eventbrite-like
 
-Things you may want to cover:
+Application incomplête, je ne suis pas parvenu a faire fonctionner la possibilté pour les utilisateur de s'ajouter un évènement!
+<br>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Tu peux retrouver l'application sur ce lien Heroku https://eventbriteal.herokuapp.com/ 

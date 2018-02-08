@@ -26,15 +26,11 @@ class EventsController < ApplicationController
   end
 
  def attend
-    if logged_in?
-      @event = Event.find(params[:id])
-      @event.user_attendees << current_user
-      @event.save
-      flash[:success] = "Vous êtes inscrit à l'événement !"
-      redirect_to events_path
-    else
-      redirect_to login_path
-    end
+    @event = Event.find(params[:id])
+    @event.user_attendees << current_user
+    @event.save
+    flash[:success] = "Vous êtes inscrit à l'événement !"
+    redirect_to events_path
   end
 
 	private

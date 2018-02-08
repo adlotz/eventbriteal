@@ -11,6 +11,7 @@
 <tr>
       <td><%= link_to event.description, event_path(event.id) %></td>
       <td>Créé par <%= event.creator.name%></td>
+      <td><%= button_to 'Je participe', attend_path(event), method: :post, class: "btn btn-lg btn-primary" %></td>
    
 </tr>
 <%end%>
