@@ -1,0 +1,37 @@
+<div class="center jumbotron">
+ <h1>Ton profil</h1>
+<% provide(:title, @user.name) %>
+<h1>
+    <%= gravatar_for @user %>
+  <p> Bienvenue sur ta page de profil <%= @user.name %>  </p>
+
+
+</h1>
+<div class="center jumbotron">
+
+
+
+<h3>Liste des évènement que tu as créé</h3>
+ 
+<table>
+  <tr>
+    <th>|Description</th>
+    <th>|Date</th>
+    <th>|Lieu</th>
+    <th>|</th>
+  </tr>
+ 
+ <% @user.created_events.each do |event| %>
+    <tr>
+      <td>| <%= event.description %> </td>
+      <td>| <%= event.date %> </td>
+      <td>| <%= event.place %> </td>
+      <td>| <%= link_to "en savoir plus", event_path(event.id), class: "btn btn-primary" %></td>
+      
+
+
+    </tr>
+  <% end %>
+</table>
+
+</div>

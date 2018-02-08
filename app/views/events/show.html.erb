@@ -1,0 +1,20 @@
+<div class="center jumbotron">
+<h1>Mon évènement</h1>
+
+<h2>Ce divertissement vous est proposé par <%= @event.creator.name%></h2>
+
+<p>Quoi: <%= @event.description %></p>
+<p>Quand: <%= @event.date%></p>
+<p>Lieu: <%= @event.place%></p>
+
+<p><%= button_to 'Je participe pas car ca ne fonctionne pas', method: :post, class: "btn btn-sm btn-primary" %></p>
+
+<p><b>Participants</b></p>
+<ul class="list-group"> 
+	<% @event.attendees.each do |user|%> 
+		<li class="list-group-item"> 
+			<%= user.name%>
+		</li>
+	<%end%>
+</ul>
+</div>

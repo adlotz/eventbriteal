@@ -1,0 +1,17 @@
+<div class="center jumbotron">
+
+
+  <% if logged_in? %>
+  <h1>Tu es connecté!</h1>
+  <h3>Va vite voir les <%= link_to 'évènements', events_path %></h3>
+	<% else%>
+  <h1>Bienvenue !</h1>
+  <h2>Tu veux créer des évènement géniaux pour inviter tout tes amis?</h2> 
+  <h2> ou bien juste participer à des fêtes mémorables?</h2>
+  <h3>
+    Commence par t'enregistrer 🎓
+  </h3>
+  <%= link_to "Inscris-toi!", new_user_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Déjà inscrit?", login_path, class: "btn btn-lg btn-primary" %>
+	<%end%>
+</div>

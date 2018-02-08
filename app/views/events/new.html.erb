@@ -1,0 +1,21 @@
+<% provide(:title, 'Event') %>
+<h1>Crée ton évènement!</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@event) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+      <%= f.label :Description %>
+      <%= f.text_area :description, class: 'form-control' %>
+      <br/>
+      <%= f.label :Date %>
+      <%= f.datetime_select :date, class: 'form-control' %>
+      <br/>
+      <%= f.label :Lieu %>
+      <%= f.text_field :place, class: 'form-control' %>
+      <br/>
+      <%= f.submit "Créer mon évènement", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

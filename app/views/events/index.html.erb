@@ -1,0 +1,18 @@
+<h1>Retrouve tout les évènements ici</h1>
+
+<div class="center jumbotron">
+<table>
+  <tr>
+    <th>Evènements</th>
+    <th>Créateur</th>
+  </tr>
+
+<% @events.each do |event| %>
+<tr>
+      <td><%= link_to event.description, event_path(event.id) %></td>
+      <td>Créé par <%= event.creator.name%></td>
+   
+</tr>
+<%end%>
+</table>
+</div>
