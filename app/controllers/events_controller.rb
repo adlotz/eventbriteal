@@ -12,8 +12,6 @@ class EventsController < ApplicationController
       @user = current_user
       @event = @user.created_events.new(event_params)
       if @event.save
-      	@event.user_attendees << current_user
-      	@event.save
         flash[:success] = "L'événement a bien été créé !"
         redirect_to current_user
       else
